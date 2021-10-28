@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayEvent</title>
+    <script>
+        var arr = [];
+        function add() {
+            var data = document.getElementById("i1").value;
+            arr.push(data);
+            document.getElementById("i1").value = "";
+            document.getElementById("div1").innerHTML = "Added";
+        }
+
+        function sum() {
+            var s = 0;
+            for (let x of arr) {
+                if(x>50){
+                s = parseInt(x) + s;
+                }
+            }
+            document.getElementById("div1").innerHTML = "Sum: " + s;
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="text" id="i1">
+    <button onclick="add()">Add Here</button> <button onclick="sum()">Sum</button>
+    <div id="div1"></div>
+</body>
+
+</html>

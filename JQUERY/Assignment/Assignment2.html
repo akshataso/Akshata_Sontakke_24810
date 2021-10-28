@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST API</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+        #d1 {
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+        }
+
+        .block {
+            text-align: center;
+            border: 1px solid black;
+            width: 200px;
+            height: 250px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/photos"
+            }).then(function (data) {
+                var y = $(".container");
+                for (let x of data) {
+                    y.append('<div class="block"><img src=' + x.thumbnailUrl + '><br><span>' + x.title + '</span><br><br><button>add to cart</button></div>')
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="d1"><b>
+            <a href="#"> Home </a> &nbsp;&nbsp;
+            <a href="#"> Product </a>&nbsp;&nbsp;
+            <a href="#"> Registration</a> &nbsp;&nbsp;
+            <a href="#"> Contact</a>&nbsp;&nbsp;
+        </b> <img src="OIP.jfif" width="40px" height="40px" style="float: right;"></div>
+
+    <hr>
+    <div class="container">
+
+    </div>
+
+</body>
+
+</html>

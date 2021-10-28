@@ -1,0 +1,9 @@
+delimiter //
+drop procedure if exists salaryHike;
+CREATE PROCEDURE salaryHike (IN alphabet varchar(1))
+       BEGIN
+			UPDATE employees
+			SET salary = salary*1.1
+            where first_name like "%a%";
+       END//
+delimiter ;

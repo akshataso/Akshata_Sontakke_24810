@@ -1,0 +1,23 @@
+$size:16px;
+
+$coloring:("col1":red,"col2":aqua,"col3":lightgreen);
+
+@mixin exec($fs,$c,$bg){
+    font-size: $fs;
+    color: $c;
+    background-color: $bg
+}
+
+h1{
+    @include exec($size+$size, map-get($coloring,"col1"),black);
+   
+}
+p{
+    @include exec($size+4, map-get($coloring,"col2"),black);
+  
+}
+
+div{
+    @include exec($size+14,map-get($coloring,"col3"),black);
+}
+

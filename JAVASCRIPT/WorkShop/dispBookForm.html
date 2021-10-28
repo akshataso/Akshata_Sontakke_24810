@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisplayBooks</title>
+    <script src="./BookMgmt.js"></script>
+</head>
+<body>
+    <ul id="myList"></ul>
+
+    <script>
+       
+      
+        let list = document.getElementById("myList");
+    
+        arr.forEach((item) => {
+          let li = document.createElement("li");
+          li.innerText = "Name: "+item.bName+", Quantity: "+item.bQuant+", Cost: "+item.bCost ;
+          list.appendChild(li);
+        });
+      </script>
+   
+    
+    <script src="./BookMgmt.js"></script>
+   
+    <a href="./BookMgmgt.html">Back</a>
+</body>
+</html>

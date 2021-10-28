@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment12</title>
+    <script>
+        function exec(){
+            var dat = document.getElementById("dat").value;
+            let d = new Date();
+           if(new Date(dat).getTime() >= d.getTime()){
+               alert("Date should be previous from today");
+               document.getElementById("dat").value = "";
+           }
+        }
+
+        function oc(){
+            var stat= false;
+            var data = document.getElementsByName("c1");
+            for (let x of data) {
+                if (x.checked) {
+                    if(x.value === "Reading"){      
+                    stat = true;
+                }else{
+                    document.getElementById("d1").style.visibility = "hidden"; 
+            }
+            }
+            }
+            if(stat){
+                document.getElementById("d1").style.visibility = "visible";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+
+        <fieldset style="width: 40%; background-color: aqua;">
+
+            <table>
+                <tr>
+                    <td style="color: red; text-align: center;" colspan="2"> Registration Form </td>
+                </tr>
+                <tr>
+                    <td>First name:</td>
+                    <td><input type="text" id="fname" required autofocus></td>
+                </tr>
+                <tr>
+                    <td>Last name:</td>
+                    <td><input type="text" id="lname" required ></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" id="dat" required  ></td>
+                </tr>
+                <tr>
+                    <td>Email Id:</td>
+                    <td><input type="email"  required ></td>
+                </tr>
+                <tr>
+                    <td>Hobby:</td>
+                    <td><input type="checkbox" name="c1" onchange="oc()" value="Reading" > Reading <br>
+                    <input type="checkbox" name="c1" onchange="oc()"  > Watching Movies<br>
+                    <input type="checkbox" name="c1"  onchange="oc()"> Photography 
+                    </td>
+                </tr>
+                <tr>
+                    <td>Favourite Writer:</td>
+                    <td><input type="text" id="d1"  required ></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;" colspan="2"> <input type="button" value="Submit" onclick="exec()">
+                        <input type="reset" value="Cancel"></td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+
+    </form>
+   
+</body>
+</html>

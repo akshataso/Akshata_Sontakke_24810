@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Form book</title>
+
+<script src="./BookMgmt.js"></script>
+    <style>
+        .inv:invalid {
+            border-color: red;
+        }
+
+        input[type="button"]:hover {
+            background-color: greenyellow;
+        }
+
+        input[type="reset"]:hover {
+            background-color: orangered;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+
+        <fieldset style="width: 40%; background-color: lightcoral;">
+
+            <table>
+                <tr>
+                    <td style="color: red; text-align: center;" colspan="2">Edit Book</td>
+                </tr>
+                <tr>
+                    <td>Name of Book:</td>
+                    <td><input type="text" class="inv" id="q1" required autofocus></td>
+                </tr>
+
+               
+                <tr>
+                    <td>Quantity:</td>
+                    <td><input type="number"  id="q2"></td>
+                </tr>
+               
+                <tr>
+                    <td style="text-align: center;" colspan="2"> <input type="button" onclick="editBook()" value="Edit Book"> <input
+                            type="reset" value="Clear Book"></td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+    </form>
+    <a href="./BookMgmgt.html">Back</a>
+
+</body>
+
+</html>

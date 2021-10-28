@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<a href="add"> Add Book</a>
+	<br><br>
+	<form action="filter" method="post">
+		<input type="text" name="search" placeholder="search">
+		<label for="book">Choose type:</label>
+		<select name="book" id="book">
+			<option value="title">Title</option>
+			<option value="publisher">Publisher</option>
+		</select>
+		<input type="submit" value="Search">
+	</form>
+	<br><br>
+	<h4>Book Details</h4>
+	<table border="2">
+		<tr>
+			<th>Book Id</th>
+			<th>Book Title</th>
+			
+			<th>Book Publisher</th>
+			<th>Action</th>
+		</tr>
+		<tr th:each="book : *{bookList}">
+			<td th:text='${book.bookId}'></td>
+			<td th:text='${book.title}'></td>
+		
+			<td th:text='${book.publisher}'></td>
+			<td><a th:href="@{/edit/{id}(id=${book.bookId})}">Edit</a>/<a
+					th:href="@{/delete/{id}(id=${book.bookId})}">Delete</a>/
+					<a
+					th:href="@{/authors/{id}(id=${book.bookId})}">Authors</a>
+					
+					</td>
+		</tr>
+	</table>
+
+
+	<br><br><br>
+	<a href="login">Logout</a>
+</body>
+
+</html>

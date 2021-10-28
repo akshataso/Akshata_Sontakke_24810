@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWorker</title>
+    <script>
+        if (window.Worker) {
+            var web = new Worker("work.js");
+            web.onmessage = function (event) {
+                document.getElementById("res").innerHTML = event.data;
+            }
+        } else {
+            alert("No support for webworker")
+        }
+
+        function stop() {
+            web.terminate();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="res"></div>
+    <button onclick="stop()">Stop</button>
+</body>
+
+</html>

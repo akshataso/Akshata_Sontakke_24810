@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Smile</title>
+</head>
+<body>
+    <canvas id="c" width="300" height="200"></canvas>
+<script>
+    var c = document.getElementById("c");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+
+    ctx.arc(159,100,75,0,2*Math.PI);
+    ctx.fillStyle = "aqua";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(135,75);
+    ctx.fillStyle = "black";
+    ctx.arc(125,75,10,0,2*Math.PI);
+    ctx.fill();
+    ctx.moveTo(185,75);
+
+    ctx.beginPath();
+    ctx.fillStyle = "black";
+    ctx.arc(175,75,10,0,2*Math.PI);
+    ctx.fill();
+    ctx.moveTo(190,120);
+    ctx.arc(150,120,40,0,Math.PI);
+    ctx.stroke();
+
+</script>
+
+</body>
+</html>

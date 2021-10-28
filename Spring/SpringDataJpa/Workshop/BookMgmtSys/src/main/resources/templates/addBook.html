@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<form action="#" th:action="@{/addBook}" method="post" th:object="${bookAuthorDto}">
+		<label>Book Id:</label>
+		<input type="text" th:field="*{bookId}" /><br />
+		<div th:if="${#fields.hasErrors('bookId')}" th:errors="*{bookId}"></div>
+		<label>Book Title:</label>
+		<input type="text" th:field="*{title}" /><br />
+		<div th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></div>
+		<label>Book Publisher:</label>
+		<input type="text" th:field="*{publisher}" /><br />
+		<div th:if="${#fields.hasErrors('publisher')}" th:errors="*{publisher}"></div>
+		<label>Author email:</label>
+		<input type="text" th:field="*{email}" /><br />
+		<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+		<label>Author name:</label>
+		<input type="text" th:field="*{name}" /><br />
+		<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+		<label>Author mobile:</label>
+		<input type="text" th:field="*{mobile}" /><br />
+		<div th:if="${#fields.hasErrors('mobile')}" th:errors="*{mobile}"></div>
+		<button type="submit">Add Book</button>
+	</form>
+
+
+</body>
+
+</html>

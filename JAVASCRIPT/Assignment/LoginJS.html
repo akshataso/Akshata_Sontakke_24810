@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        input[type="submit"]:hover {
+            background-color: greenyellow;
+        }
+
+        input[type="reset"]:hover {
+            background-color: orangered;
+        }
+    </style>
+     <script>
+        function exec() {
+            var user = document.getElementById("uname").value;
+            var password = document.getElementById("pass").value;
+            if (user === "admin" && password === "admin") {
+               alert( "Valid User");
+            } else {
+             alert("Invalid User");
+            }
+        }
+
+    </script>
+   
+</head>
+
+<body>
+    <form>
+
+        <fieldset style="width: 40%; background-color: aqua;">
+
+            <table>
+                <tr>
+                    <td style="color: red; text-align: center;" colspan="2"> Login Form </td>
+                </tr>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" id="uname" required autofocus></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" id="pass" required></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;" colspan="2"> <input type="submit" value="Login" onclick="exec()">
+                        <input type="reset" value="Cancel"></td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+
+    </form>
+
+    
+
+
+   
+</body>
+
+</html>

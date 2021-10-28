@@ -1,0 +1,27 @@
+
+@mixin exec($bg,$bc) {
+    background-color: $bg;
+    border-color: $bc;
+    color: $bc;
+    transform: scale(2,2);
+    
+}
+@debug "This is test debug";
+
+
+
+#b1{
+    @include exec(black,red  )
+}
+#b2{
+    @include exec(black,aqua  )
+}
+#b3{
+    @include exec(black,lightgreen )
+}
+#b4{
+    @include exec(black,yellow  )
+}
+#b5{
+    @include exec(black,orange  )
+}

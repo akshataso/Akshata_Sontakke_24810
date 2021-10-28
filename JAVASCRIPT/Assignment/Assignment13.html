@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        button {
+            width: 100%;
+        }
+        #sq,#sqr,#cu{
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        function exec(val) {
+            document.getElementById("led").value = document.getElementById("led").value + val;
+        }
+        function clean() {
+            document.getElementById("led").value = "";
+        }
+        function execute() {
+            let tot = eval(document.getElementById("led").value);
+            document.getElementById("led").value = tot;
+        }
+        var stat = true;
+        
+        function togg() {
+            var x = document.getElementById("sq");
+            var y = document.getElementById("cu");
+            var z = document.getElementById("sqr");
+            if(!stat){
+            x.style.visibility = "hidden";
+            y.style.visibility = "hidden";
+            z.style.visibility = "hidden";
+
+            stat = true;
+            }else{
+                x.style.visibility = "visible";
+            y.style.visibility = "visible";
+            z.style.visibility = "visible";
+
+            stat = false;
+            }
+
+        }
+        function sqrT(){
+            let tot = document.getElementById("led").value;
+           
+            document.getElementById("led").value = Math.sqrt(tot);
+        }
+         function cubE(){
+            let tot = document.getElementById("led").value;
+            document.getElementById("led").value = tot*tot*tot;
+        }
+        function sqr(){
+            let tot = document.getElementById("led").value;
+            document.getElementById("led").value = tot*tot;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h3> Calculator</h3>
+    <table>
+        <tr>
+            <td colspan="2"><input type="text" id="led" /></td>
+            <td><button onclick="clean()">C</button> </td>
+            <td><button onclick="togg()">SciFi</button></td>
+            <td id="sq"><button onclick="sqrT()">Sqrt</button></td>
+            <td id="cu"><button onclick="cubE()">Cube</button></td>
+            <td id="sqr"><button onclick="sqr()">Sqr</button></td>
+        </tr>
+        <tr>
+
+            <td><button onclick="exec('1')">1</button> </td>
+            <td><button onclick="exec('2')">2</button> </td>
+            <td><button onclick="exec('3')">3</button> </td>
+            <td><button onclick="exec('/')">/</button> </td>
+
+        </tr>
+        <tr>
+            <td><button onclick="exec('4')">4</button> </td>
+            <td><button onclick="exec('5')">5</button> </td>
+            <td><button onclick="exec('6')">6</button> </td>
+            <td><button onclick="exec('-')">-</button> </td>
+
+        </tr>
+        <tr>
+            <td><button onclick="exec('7')">7</button> </td>
+            <td><button onclick="exec('8')">8</button> </td>
+            <td><button onclick="exec('9')">9</button> </td>
+            <td><button onclick="exec('+')">+</button> </td>
+
+        </tr>
+        <tr>
+            <td><button onclick="exec('.')">.</button> </td>
+            <td><button onclick="exec('0')">0</button> </td>
+            <td><button onclick="execute()">=</button> </td>
+            <td><button onclick="exec('*')">*</button> </td>
+
+        </tr>
+    </table>
+</body>
+
+</html>

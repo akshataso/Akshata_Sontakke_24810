@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2</title>
+    <script>
+        function exec() {
+            var color = document.getElementById("c1").value;
+            // alert(color);
+            document.getElementById("p1").style.color = color;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <p id="p1">
+            A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can
+            often
+            happen due to being stuck with a current project that the writer is trying to complete. By inserting a
+            completely random paragraph from which to begin, it can take down some of the issues that may have been
+            causing
+            the writers block in the first place.
+        </p>
+    </div>
+
+    <input type="color" name="c1" id="c1" onchange="exec()">
+</body>
+
+</html>

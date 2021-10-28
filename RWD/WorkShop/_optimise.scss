@@ -1,0 +1,9 @@
+
+@mixin image($wd) {
+    max-width: $wd;
+    height: auto;
+}
+
+@mixin fontSize($fs) {
+    font-size: $fs;
+}

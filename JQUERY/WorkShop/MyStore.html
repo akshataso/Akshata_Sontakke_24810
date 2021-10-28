@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyStore</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+        div {
+            text-align: center;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        button {
+            width: 100px;
+            border-width: 5px;
+            font-size: 15px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: yellowgreen;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .aqua {
+            background-color: aqua;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        input[type=text] {
+            background-color: white;
+            width: 195px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $("#d2>img").show();
+                $("#d2>input").show();
+            })
+
+            $("#b2").click(function () {
+                $("#d2>img").show();
+                $("#d2>input").show();
+                $("#d2>img").filter(":not(.green)").hide();
+                $("#d2>input").filter(":not(.green)").hide();
+            })
+            $("#b3").click(function () {
+                $("#d2>img").show();
+                $("#d2>input").show();
+                $("#d2>img").filter(":not(.yellow)").hide();
+                $("#d2>input").filter(":not(.yellow)").hide();
+            })
+            $("#b4").click(function () {
+                $("#d2>img").show();
+                $("#d2>input").show();
+                $("#d2>img").filter(":not(.aqua)").hide();
+                $("#d2>input").filter(":not(.aqua)").hide();
+            })
+            $("#b5").click(function () {
+                $("#d2>img").show();
+                $("#d2>input").show();
+                $("#d2>img").filter(":not(.orange)").hide();
+                $("#d2>input").filter(":not(.orange)").hide();
+            })
+
+            $("#s1").on("keyup", function () {
+                $("#d2>img").hide();
+                $("#d2>input").hide();
+                var val = $(this).val().toLowerCase();
+                $("#d2>img").filter(function () {
+                    if ("cakes".toLowerCase().indexOf(val) > -1) {
+                        $("#d2>img").filter(".green").show();
+                        $("#d2>input").filter(".green").show();
+                    }
+                    if ("cupcake".toLowerCase().indexOf(val) > -1) {
+                        $("#d2>img").filter(".yellow").show();
+                        $("#d2>input").filter(".yellow").show();
+                    }
+                    if ("doughnuts".toLowerCase().indexOf(val) > -1) {
+                        $("#d2>img").filter(".orange").show();
+                        $("#d2>input").filter(".orange").show();
+                    }
+                    if ("sweets".toLowerCase().indexOf(val) > -1) {
+                        $("#d2>img").filter(".aqua").show();
+                        $("#d2>input").filter(".aqua").show();
+                    }
+                });
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="d1">
+        <img id="i1" src="myStoreLogo.png" width="200px">
+        <br><br>
+        <button class="red" id="b1">All</button>
+        <button class="green" id="b2">Cakes</button>
+        <button class="yellow" id="b3">Cupcakes</button>
+        <button class="aqua" id="b4">Sweets</button>
+        <button class="orange" id="b5">Doughnuts</button>
+        <br><br><img src="searchIcon.png" width="17px">
+        <input type="search" name="s1" id="s1" placeholder="Search Item Here">
+        <br><br>
+        <div id="d2">
+            <img src="cake1.jfif" class="green" width="200px">
+            <span style="padding: 10px;"></span>
+            <img src="cake2.jpg" class="green" width="200px">
+            <span style="padding: 10px;"></span>
+            <img src="cupcake1.jpg" class="yellow" width="202px" height="150px">
+            <br>
+            <input type="text" class="green" disabled value="Cake Item                       Rs.100">
+            <span style="padding:10px"></span>
+            <input type="text" class="green" disabled value="Cake Item                       Rs.150">
+            <span style="padding:10px"></span>
+            <input type="text" class="yellow" disabled value="Cupcake Item                     Rs.50">
+            <br> <br>
+            <!--1st row ended and 2nd row started-->
+            <img src="donuts1.jfif" class="orange" width="200px" height="150px">
+            <span style="padding: 10px;"></span>
+            <img src="sweet1.jfif" width="200px" class="aqua" height="150px">
+            <span style="padding: 10px;"></span>
+            <img src="donuts2.jpg" width="201px" class="orange" height="150px">
+            <br>
+            <input type="text" class="orange" disabled value="Doughnuts Item                     Rs.300">
+            <span style="padding:10px"></span>
+            <input type="text" class="aqua" disabled value="Sweet Item                      Rs.125">
+            <span style="padding:10px"></span>
+            <input type="text" class="orange" disabled value="Doughnuts Item                     Rs.450">
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <style>
+        span {
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            display: inline-block;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: yellowgreen;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+
+
+            $("#r1").on("click", function () {
+                //  alert("red");
+               $("span").show();
+                $("span").filter(":not(.red)").hide();
+            });
+            $("#g1").on("click", function () {
+                //  alert("red");
+                $("span").show();
+                $("span").filter(":not(.green)").hide();
+            });
+            $("#y1").on("click", function () {
+                //  alert("red");
+                $("span").show();
+                $("span").filter(":not(.yellow)").hide();
+            });
+
+            $("#res").on("click",function(){
+                $("span").show();
+            })
+
+
+
+        })
+    </script>
+</head>
+
+<body style="background-color: black;">
+
+    <button style="background-color: red;" id="r1">Show Red</button>
+    <button style="background-color: yellowgreen;" id="g1">Show Green</button>
+    <button style="background-color: yellow;" id="y1">Show Yellow</button> 
+    <button style="background-color: bisque;" id="res">Reset</button><br><br><br>
+
+    <span class="red"></span>
+    <span class="green"></span>
+    <span class="yellow"></span>
+    <span class="red"></span>
+    <span class="green"></span>
+    <span class="yellow"></span>
+    <span class="red"></span>
+
+</body>
+
+</html>

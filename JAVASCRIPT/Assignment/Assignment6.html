@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment6</title>
+    <script>
+        function compoundInterest(){
+       var p = document.getElementById("p").value;
+       var r = document.getElementById("r").value;
+       var n = document.getElementById("i").value;
+
+           var a  = Math.pow((1+r/100),n);
+           var c= (a*p)-p;
+        
+      document.getElementById("pi").innerHTML = "Total Interest: "+c;
+        }
+   </script>
+</head>
+<body>
+    
+    Principal: <input type="text" id="p">
+    Rate: <input type = "text" id="r">
+    Interest: <input type="text" id="i">
+    <button onclick="compoundInterest()">Calculate</button>
+    <p id="pi"></p>
+   
+</body>
+</html>

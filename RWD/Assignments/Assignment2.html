@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign2</title>
+    <style>
+        #i1 {
+            max-width: 10%;
+            height: auto;
+        }
+
+        .flex {
+            display: flex;
+            font-size: large;
+            flex-direction: row;
+        }
+
+        .left {
+            margin-left: auto;
+
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 20px;
+        }
+
+
+        @media screen and (max-width:800px) {
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+           aside{
+               visibility: hidden;
+           }
+            .flex {
+                display: flex;
+                font-size: large;
+                flex-direction: column;
+            }
+
+            .left {
+                margin-left: 0;
+            }
+
+            a {
+                display: block;
+            }
+        }
+
+        .block{
+        max-width: 90%;
+        height: 100%;
+        border: 1px solid black;
+        text-align: center;
+        }
+        img{
+            max-width: 80%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="flex">
+        <img id="i1" src="eLogo.png">
+        <div class="left">
+            <b> <a href="#">Home</a>&nbsp;&nbsp;</b>
+            <b> <a href="#">Products</a>&nbsp;&nbsp;</b>
+            <b> <a href="#">Registration</a>&nbsp;&nbsp;</b>
+            <b> <a href="#">Video</a>&nbsp;&nbsp;</b>
+
+        </div>
+    </div>
+    <hr>
+    <aside style="max-width: 25%; float: left; height: 800px; background-color: grey;">
+        <div style="background-color: grey;" id="d1">
+            <ul>
+                <li><a href="#">Quick Links</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </div>
+    </aside>
+    <div class="grid">
+      
+
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+      <div class="block"><img src="eLogo.png"><br> Product <br>Rs. 123.2 <br> This is discription <br> <button>add to cart</button></div>
+     
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Is Here</title>
+</head>
+
+<body>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <fieldset style="width: 30%;">
+            <legend>Form</legend>
+            Name: <input type="text" name="name" id="name" autofocus autocomplete="additional-name"> <br><br>
+            <br> EmailId: <input type="email" id="email" placeholder="example@domain.com" required><br>
+            <br> Date: &nbsp; <input type="date" id="date"><br>
+            <br> Colour: <input type="color"><br>
+            <br> Range: 0 <input type="range" min=0 max=100> 100 <br>
+            <br> Salary: <input type="number" id="sal" name="sal">
+            <br> Address: <input type="textarea"><br>
+
+            <br> <input type="text" placeholder="Select technology" list="technology">
+            <datalist id="technology">
+                <option value="Java">
+                <option value="Python">
+                <option value=".Net">
+                <option value="Ruby">
+            </datalist> <br> <br>
+            <input type="range" id="a"> + <input type="text" id="b" value=50><br>
+            = <output name="x" for="a b"></output> <br> <br>
+            <br> <input type="submit"> <input type="reset">
+        </fieldset>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+@import "base/variables";
+@import "modules/buttons";
+
+
+#i1{  
+border-radius: 3px;  
+width:300px;
+height:36px;
+font-style:"SegoUI";
+font-size:13px;
+padding-left:10px;
+@include exec(#ffffff,#666666)
+}
+
+#i2{
+cursor: not-allowed;
+@include exec(#eeeeee,#999999)
+}
+
+#i3{
+@include exec(#fde7e1,#f44336,#f44336)
+}
+
+
+
+
+.pim{
+    @extend .bt1;
+    @include exec(#8bc34a,#FFFFFF,#8bc34a);
+    &:hover{     
+          @include exec(#9dce5d,#FFFFFF,#9dce5d)
+    }
+
+    &:disabled{
+          @include exec(#eeeeee,#999999,#eeeeee)
+    }
+   
+}
+
+.sec{
+    @extend .bt1;
+    @include exec(#FFFFFF,#2095f2,#2095f2);
+    &:hover{
+      
+        @include exec(#2095f2,#FFFFFF,#2095f2)
+    }
+    &:disabled{
+        @include exec(#ffffff,#999999,#cccccc)
+  }
+}

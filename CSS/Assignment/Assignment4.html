@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table CSS</title>
+    <script>
+        function exec(){
+            document.getElementById("empid").style.backgroundColor="yellow";
+           
+        }
+        function chng(){
+            document.getElementById("empid").style.backgroundColor="white";
+            
+        }
+        function dateValid(){
+            var n = new Date();
+            var d = n.getFullYear()+"-"+n.getMonth()+"-"+n.getDate();
+            document.getElementById("d1").setAttribute("min",d);
+        }
+       function al(){
+           alert("success");
+       }
+    </script>
+    <style>
+        #div1 {
+            width: 70%;
+            padding-bottom: 25px;
+        }
+
+        div,
+        span,
+        input {
+            border: 3px double lightslategrey;
+        }
+
+        #s1 {
+            padding-right: 250px;
+        }
+
+        #s2,
+        #s3 {
+            padding-right: 265px;
+        }
+
+        #s4,
+        #div2 {
+            padding-right: 263px;
+            padding-bottom: 80px;
+        }
+
+        #div3 {
+            width: 38%;
+            position: absolute;
+            left: 360px;
+            top: 170px;
+            border: 0px;
+        }
+
+        #div4 {
+            width: 38%;
+            position: absolute;
+            left: 360px;
+            top: 190px;
+            border: 0px;
+        }
+
+        #div5 {
+            width: 38%;
+            position: absolute;
+            left: 360px;
+            top: 210px;
+            border: 0px;
+        }
+
+        #div6 {
+            width: 38%;
+            position: absolute;
+            left: 360px;
+            top: 230px;
+            border: 0px;
+        }
+
+        #s5 {
+            padding-right: 244px;
+        }
+
+        #s6 {
+            padding-right: 305px;
+        }
+
+        #s7 {
+            padding-right: 268px;
+        }
+
+        #s8 {
+            padding-right: 292px;
+            padding-bottom: 133px;
+            position: absolute;
+            top: 362px;
+        }
+
+        #div7 {
+            padding-bottom: 155px;
+        }
+
+        #i1 {
+            height: 150px;
+            position: absolute;
+            top: 362px;
+            left: 365px;
+        }
+
+        #s9 {
+            padding-right: 130px;
+            padding-bottom: 55px;
+        }
+
+        #div9 {
+            position: absolute;
+            top: 522px;
+            left: 368px;
+            border: 0;
+        }
+
+        #div10 {
+            position: absolute;
+            top: 542px;
+            left: 368px;
+            border: 0;
+        }
+
+        #div11 {
+            position: absolute;
+            top: 562px;
+            left: 368px;
+            border: 0;
+        }
+
+        #div12 {
+            position: absolute;
+            top: 582px;
+            left: 368px;
+            border: 0;
+        }
+
+        #div8 {
+            padding-bottom: 56px;
+        }
+
+        #div13 {
+            position: absolute;
+            top: 600px;
+            left: 365px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body onload="exec()">
+    <div id="div1">
+        <h2 style="text-align: center;">Registration Form</h2>
+        <div>
+            <span id="s1">Employee ID: </span> <input type="number" onchange="chng()" id="empid" min="10001" max="15000"  autofocus required>
+        </div>
+        <div><span id="s2">First Name: </span> <input type="text" minlength="3"  maxlength="15" id="" required placeholder="first name"></div>
+        <div><span id="s3">Last Name: </span> <input type="text" id="" placeholder="last name" required minlength="5" maxlength="25"></div>
+        <div id="div2"><span id="s4">Department: </span>
+
+            <div id="div3"><input type="radio" id=""> IT</div>
+            <div id="div4"><input type="radio" id=""> HR</div>
+            <div id="div5"><input type="radio" id=""> Finance</div>
+            <div id="div6"><input type="radio" id=""> Admin</div>
+
+        </div>
+        <div><span id="s5"> Date of Joining</span><input type="date" onload="dateValid()" required name="" id="d1"></div>
+        <div><span id="s6">Email</span><input type="email" name="" id=""></div>
+        <div><span id="s7">Contact No.</span><input type="text" minlength="10" maxlength="10" name="" id=""></div>
+        <div id="div7"><span id="s8">Address</span><input type="textarea" size="58px" name="" id="i1"></div>
+        <div id="div8"><span id="s9">Training Programs to be attended: </span>
+
+            <div id="div9"><input type="checkbox" id=""> Web Basics</div>
+            <div id="div10"><input type="checkbox" id=""> C#</div>
+            <div id="div11"><input type="checkbox" id=""> Entry Framework</div>
+            <div id="div12"><input type="checkbox" id=""> ASP.NET MVC</div>
+
+        </div>
+        <div id="div13"><input type="submit" name="" id="" onsubmit="al()" value="Register">
+            <input type="reset" value="Cancel" name="" id="">
+        </div>  
+    </div>
+</body>
+
+</html>

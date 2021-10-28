@@ -1,0 +1,40 @@
+#b1 {
+  background-color: black;
+  border-color: red;
+  color: red;
+  -webkit-transform: scale(2, 2);
+          transform: scale(2, 2);
+}
+
+#b2 {
+  background-color: black;
+  border-color: aqua;
+  color: aqua;
+  -webkit-transform: scale(2, 2);
+          transform: scale(2, 2);
+}
+
+#b3 {
+  background-color: black;
+  border-color: lightgreen;
+  color: lightgreen;
+  -webkit-transform: scale(2, 2);
+          transform: scale(2, 2);
+}
+
+#b4 {
+  background-color: black;
+  border-color: yellow;
+  color: yellow;
+  -webkit-transform: scale(2, 2);
+          transform: scale(2, 2);
+}
+
+#b5 {
+  background-color: black;
+  border-color: orange;
+  color: orange;
+  -webkit-transform: scale(2, 2);
+          transform: scale(2, 2);
+}
+/*# sourceMappingURL=button.css.map */

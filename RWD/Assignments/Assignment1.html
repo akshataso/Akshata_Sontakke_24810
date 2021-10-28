@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign1</title>
+    <style>
+        #i1 {
+            max-width: 10%;
+            height: auto;
+        }
+
+        .flex {
+            display: flex;
+            font-size: large;
+            flex-direction: row;
+        }
+
+        .left {
+            margin-left: auto;
+
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+
+        @media screen and (max-width:800px) {
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            #d1 {
+                visibility: hidden;
+            }
+
+            .flex {
+                display: flex;
+                font-size: large;
+                flex-direction: column;
+            }
+
+            .left {
+                margin-left: 0;
+            }
+
+            a {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="flex">
+        <img id="i1" src="eLogo.png">
+        <div class="left">
+            <b> <a href="#">Home</a>&nbsp;&nbsp;</b>
+            <b> <a href="#">Products</a>&nbsp;&nbsp;</b>
+            <b> <a href="#">Registration</a>&nbsp;&nbsp;</b>
+            <b> <a href="#">Video</a>&nbsp;&nbsp;</b>
+
+        </div>
+    </div>
+    <hr>
+    <div class="grid">
+        <div style="background-color: grey;" id="d1">
+            <ul>
+                <li><a href="#">Quick Links</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+
+
+            </ul>
+        </div>
+
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dicta quisquam voluptas voluptatem, ut
+            asperiores eligendi rem nobis quaerat repellendus tempore distinctio consequatur hic vel quam numquam
+            corrupti fugit. Tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim excepturi ratione sed
+            harum, recusandae, voluptatum magnam nihil minima tenetur autem saepe quod, exercitationem mollitia
+            laboriosam voluptas ducimus? Exercitationem, eaque maxime? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Reiciendis, commodi obcaecati? Praesentium dolor officiis debitis tempore incidunt illo,
+            nulla maxime enim obcaecati eaque rerum eos similique vero, quam aliquid culpa! Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Pariatur aspernatur odio deserunt, ipsum
+            molestias voluptate quo sunt possimus repudiandae, praesentium quam autem! Tempore doloribus saepe ratione
+            nemo ea animi ex? Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci provident cum ut dolores
+            asperiores totam suscipit, ad reprehenderit iusto, obcaecati ipsam nisi maxime, tempore sapiente cupiditate
+            sit. Aspernatur, voluptatibus totam.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dicta quisquam voluptas voluptatem, ut
+            asperiores eligendi rem nobis quaerat repellendus tempore distinctio consequatur hic vel quam numquam
+            corrupti fugit. Tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim excepturi ratione sed
+            harum, recusandae, voluptatum magnam nihil minima tenetur autem saepe quod, exercitationem mollitia
+            laboriosam voluptas ducimus? Exercitationem, eaque maxime? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Reiciendis, commodi obcaecati? Praesentium dolor officiis debitis tempore incidunt illo,
+            nulla maxime enim obcaecati eaque rerum eos similique vero, quam aliquid culpa! Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Pariatur aspernatur odio deserunt, ipsum
+            molestias voluptate quo sunt possimus repudiandae, praesentium quam autem! Tempore doloribus saepe ratione
+            nemo ea animi ex? Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci provident cum ut dolores
+            asperiores totam suscipit, ad reprehenderit iusto, obcaecati ipsam nisi maxime, tempore sapiente cupiditate
+            sit. Aspernatur, voluptatibus totam.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dicta quisquam voluptas voluptatem, ut
+            asperiores eligendi rem nobis quaerat repellendus tempore distinctio consequatur hic vel quam numquam
+            corrupti fugit. Tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim excepturi ratione sed
+            harum, recusandae, voluptatum magnam nihil minima tenetur autem saepe quod, exercitationem mollitia
+            laboriosam voluptas ducimus? Exercitationem, eaque maxime? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Reiciendis, commodi obcaecati? Praesentium dolor officiis debitis tempore incidunt illo,
+            nulla maxime enim obcaecati eaque rerum eos similique vero, quam aliquid culpa! Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Pariatur aspernatur odio deserunt, ipsum
+            molestias voluptate quo sunt possimus repudiandae, praesentium quam autem! Tempore doloribus saepe ratione
+            nemo ea animi ex? Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci provident cum ut dolores
+            asperiores totam suscipit, ad reprehenderit iusto, obcaecati ipsam nisi maxime, tempore sapiente cupiditate
+            sit. Aspernatur, voluptatibus totam.</div>
+
+
+    </div>
+</body>
+
+</html>

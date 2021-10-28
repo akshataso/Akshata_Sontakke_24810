@@ -1,0 +1,9 @@
+$btn-bg-color: #cccccc;
+
+
+@mixin  exec($bg,$cl,$brC:black) {
+    background-color:$bg ;
+    color: $cl;
+    border: 1px solid $brC;
+    
+}

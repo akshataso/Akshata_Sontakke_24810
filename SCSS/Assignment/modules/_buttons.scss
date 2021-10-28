@@ -1,0 +1,15 @@
+button-class{
+    background-color:$btn-bg-color;
+    color: #000000;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+     }
+     .bt1{
+        padding: 12px 15px 12px 15px;
+        @include exec(#8bc34a,#FFFFFF);
+        border: 0;
+        min-width: 110px;
+        font-family: "SegoeUI SemiBold";
+        font-size: 16px;
+        border-radius:3px
+    }

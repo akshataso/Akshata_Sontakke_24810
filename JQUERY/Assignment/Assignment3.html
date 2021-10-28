@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+
+            var opt = ["Mumbai", "Ujjain", "Mysore", "Surat"];
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+            $("#cit").autocomplete({
+                source: opt
+            });
+
+            $("input[type=button]").on("click", function () {
+
+
+                $('#check').click(function () {
+                    $(this).is(':checked') ? $('#test-input').attr('type', 'text') : $('#test-input').attr('type', 'password');
+                });
+
+                var data = $("input[type=email]").val();
+
+                if (!isEmail(data)) {
+                    alert("Enter valid email ID");
+                    data = "";
+                }
+                function isEmail(email) {
+                    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                    return regex.test(email);
+                }
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <form>
+
+        <fieldset style="width: 40%; background-color: aqua;">
+
+            <table>
+                <tr>
+                    <td style="color: red; text-align: center;" colspan="2"> Registration Form </td>
+                </tr>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" id="uname" required autofocus></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td> <input type='password' id='test-input' /> <br>
+                        <input type='checkbox' id='check' /> Show password
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" required></td>
+                </tr>
+                <tr>
+                    <td>Mobile:</td>
+                    <td><input type="text" maxlength="10" minlength="10" required></td>
+                </tr>
+                <tr>
+                    <td>Skills:</td>
+                    <td><input id="tags" required></td>
+                </tr>
+
+                <tr>
+                    <td>City:</td>
+                    <td><input id="cit" required></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;" colspan="2"> <input type="button" value="Submit">
+                        <input type="reset" value="Cancel">
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music List</title>
+    <script>
+        function exec() {
+            var sum = 0;
+            var data = document.getElementsByName("c");
+            for (let x of data) {
+                if (x.checked) {
+                    sum = eval(x.value) + sum;
+                }
+            }
+            document.getElementById("p1").innerHTML = "Total: " + sum + " Rs.";
+        }
+    </script>
+</head>
+
+<body>
+
+    <table border="1" style="border-spacing: 10px;">
+        <tr>
+            <th>Genre</th>
+            <th>Price (Rs.)</th>
+            <th>Discount (%)</th>
+        </tr>
+        <tr>
+            <td>Rap</td>
+            <td>600</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Classical</td>
+            <td>600</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>Metal</td>
+            <td>700</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>EDM</td>
+            <td>400</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Hard Rock</td>
+            <td>200</td>
+            <td>20</td>
+        </tr>
+    </table>
+
+    <br><br><br>
+
+    <fieldset style="width: 45%;">
+        <legend>Music List</legend>
+        <input type="checkbox" name="c" id="c1" value="600-(600*30/100)"> Rap
+        <br>
+        <input type="checkbox" name="c" id="c2" value="600-(600*40/100)"> Classical
+        <br>
+        <input type="checkbox" name="c" id="c3" value="700-(700*20/100)"> Metal
+        <br>
+        <input type="checkbox" name="c" id="c4" value="400-(400*30/100)"> EDM
+        <br>
+        <input type="checkbox" name="c" id="c5" value="200-(200*20/100)"> Hard Rock
+    </fieldset>
+    <br>
+    <button onclick="exec()">Payment HERE</button>
+    <p id="p1"></p>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAUA,AAAA,EAAE,CAAA;EALE,SAAS,EAMK,IAAW;EALzB,KAAK,EAJS,GAAG;EAKjB,gBAAgB,EAIqC,KAAK;CAE7D;;AACD,AAAA,CAAC,CAAA;EATG,SAAS,EAUK,IAAO;EATrB,KAAK,EAJoB,IAAI;EAK7B,gBAAgB,EAQiC,KAAK;CAEzD;;AAED,AAAA,GAAG,CAAA;EAdC,SAAS,EAeK,IAAQ;EAdtB,KAAK,EAJgC,UAAU;EAK/C,gBAAgB,EAaiC,KAAK;CACzD",
+    "sources": [
+        "varOps.scss"
+    ],
+    "names": [],
+    "file": "varOps.css"
+}

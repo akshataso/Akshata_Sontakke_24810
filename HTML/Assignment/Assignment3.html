@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragAndDrop</title>
+</head>
+<body>
+    <script>
+        function allow(e){
+            e.preventDefault();
+        }
+        function drag(e){
+            e.dataTransfer.setData("text/html",e.target.id);
+        }
+        function drop(e){
+            e.preventDefault();
+            var data = e.dataTransfer.getData("text/html");
+            e.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+
+<div id="div1" ondragover="allow(event)" ondrop="drop(event)" style=" height: 170px; width:450px; padding:10px; border: 1px solid; border-color:black">
+
+</div>
+<br><br><br>
+<img id="drag" width="200" height="200" draggable="true" ondragstart="drag(event)"
+src="https://cdn.pixabay.com/photo/2017/01/08/13/58/cube-1963036__340.jpg">
+</body>
+</html>

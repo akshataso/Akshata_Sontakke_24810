@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Assignment</title>
+    <script>
+        function exec() {
+            var data = document.getElementById("p1").value;
+            if (data !== document.getElementById("t1").value) {
+                alert("Password and confirm password must be same.");
+                document.getElementById("t1").value="";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+
+        <fieldset style="width: 40%; background-color: aqua;">
+
+            <table>
+                <tr>
+                    <td style="color: red; text-align: center;" colspan="2">Registration</td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" required autofocus></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input id="p1" type="password" required ></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password:</td>
+                    <td><input type="password" name="t1" id="t1" onchange="exec()"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td><input type="radio" name="gender">Male: <input type="radio" name="gender">Female:</td>
+                </tr>
+                <tr>
+                    <td>Contact:</td>
+                    <td><input type="text" minlength="10" maxlength="10"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; color: red;">Educational Qualification:</td>
+                </tr>
+                <tr>
+                    <td>Degree: </td>
+                    <td><input type="text" placeholder="Select Group" list="technology">
+                        <datalist id="technology">
+                            <option value="BE">
+                            <option value="ME">
+                            <option value="BTech">
+                            <option value="MTech">
+                        </datalist>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="2" style="color: red; text-align: center;">Address:</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><input type="textarea" cols="50" rows="50"></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;" colspan="2"> <input type="submit" value="Register"> <input
+                            type="reset" value="Clear"></td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
